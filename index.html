@@ -24,9 +24,50 @@ body{margin:0;font-family:Arial;background:#0b1220;color:white;}
 nav{background:black;padding:20px;display:flex;justify-content:space-between;}
 nav a{color:white;text-decoration:none;margin-left:20px;}
 .hero{
+  .header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+}
+
+.logo span{
+color:white;
+font-size:14px;
+letter-spacing:1px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-size:14px;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:#00c3ff;
+}
+.hero{
 height:90vh;
 background:url('palisade.jpg') center/cover no-repeat;
-display:flex;align-items:center;justify-content:center;text-align:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 }
 .hero h1{font-size:40px;}
 .btn{
@@ -38,15 +79,18 @@ footer{background:black;padding:40px;text-align:center;font-size:14px;}
 </head>
 <body>
 
-<nav>
-<div><b>HYUNDAI CIREBON</b></div>
-<div>
-<a href="index.html">Home</a>
-<a href="lineup.html">Line Up</a>
-<a href="contact.html">Contact</a>
-</div>
-</nav>
+<nav class="header">
+  <div class="logo">
+    <img src="hyundai-logo.png" height="28">
+    <span>ARDI HYUNDAI CIREBON</span>
+  </div>
 
+  <div class="menu">
+    <a href="index.html">Home</a>
+    <a href="lineup.html">Line Up</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 <div class="hero">
 <div>
 <h1>Empire Level Hyundai Dealer</h1>
