@@ -1,105 +1,220 @@
 <!DOCTYPE html>
-<html>u
+<html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Line Up</title>
+<title>Hyundai Cirebon | Ultra Motion Line Up</title>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
 <style>
-body{margin:0;font-family:Arial;background:#0f172a;color:white;}
-nav{background:black;padding:20px;display:flex;justify-content:space-between;}
-nav a{color:white;text-decoration:none;margin-left:20px;}
-.grid{
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+background: radial-gradient(circle at top,#0a1f44,#000814 70%);
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(20px);
+z-index:1000;
+}
+
+header h2{
+font-weight:700;
+letter-spacing:2px;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#2f6bff;
+}
+
+/* HERO */
+.hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:80px;
+}
+
+.hero h1{
+font-size:40px;
+background:linear-gradient(90deg,#ffffff,#2f6bff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:20px;
+}
+
+/* CARD SECTION */
+.container{
+padding:60px 20px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;padding:40px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
 }
-.card{background:#111827;border-radius:15px;overflow:hidden;}
-.card img{width:100%;height:180px;object-fit:cover;}
-.card-content{padding:20px;}
-.price{color:#00ff88;font-weight:bold;margin:10px 0;}
+
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border-radius:20px;
+padding:25px;
+transition:0.5s;
+position:relative;
+overflow:hidden;
+box-shadow:0 10px 40px rgba(0,0,0,0.6);
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 20px 60px rgba(0,0,0,0.9);
+}
+
+.card img{
+width:100%;
+transition:0.5s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.card h3{
+margin-top:20px;
+font-size:22px;
+}
+
+.price{
+color:#00ff9d;
+font-size:20px;
+margin:10px 0;
+}
+
 button{
-padding:12px;width:100%;border:none;border-radius:25px;
-background:#2d6cff;color:white;
+padding:12px 25px;
+border:none;
+border-radius:30px;
+background:linear-gradient(90deg,#2f6bff,#0051ff);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
 }
-footer{background:black;padding:30px;text-align:center;}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #2f6bff;
+}
 </style>
 </head>
+
 <body>
 
+<header>
+<h2>HYUNDAI CIREBON</h2>
 <nav>
-<div><b>HYUNDAI CIREBON</b></div>
-<div>
 <a href="index.html">Home</a>
-<a href="lineup.html">Line Up</a>
 <a href="contact.html">Contact</a>
-</div>
 </nav>
+</header>
 
-<h2 style="text-align:center;margin-top:30px;">Hyundai Line Up 2026</h2>
+<section class="hero" data-aos="fade-up">
+<h1>Hyundai Line Up 2026</h1>
+<p>Experience Premium Motion Technology</p>
+</section>
 
-<div class="grid">
+<section class="container">
 
-<div class="card">
+<div class="card" data-aos="fade-up">
 <img src="stargazer.jpg">
-<div class="card-content">
 <h3>Stargazer</h3>
 <div class="price">Mulai Rp 259.700.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Stargazer" target="_blank">
 <button>Request Quote</button>
-</div>
-</div>
-
-<div class="card">
-<img src="stargazer-cartenz.jpg">
-<div class="card-content">
-<h3>Stargazer Cartenz</h3>
-<div class="price">Mulai Rp 277.500.000</div>
-<button>Request Quote</button>
-</div>
-</div>
-
-<div class="card">
-<img src="creta.jpg">
-<div class="card-content">
-<h3>Creta</h3>
-<div class="price">Mulai Rp 309.300.000</div>
-<button>Request Quote</button>
-</div>
-</div>
-
-<div class="card">
-<img src="santa-fe.jpg">
-<div class="card-content">
-<h3>Santa Fe</h3>
-<div class="price">Mulai Rp 737.300.000</div>
-<button>Request Quote</button>
-</div>
-</div>
-
-<div class="card">
-<img src="palisade.jpg">
-<div class="card-content">
-<h3>Palisade</h3>
-<div class="price">Mulai Rp 1.133.400.000</div>
-<a href="https://wa.me/6287772805133?text=Halo%20Ardi%20Hyundai%20Cirebon,%20saya%20ingin%20request%20penawaran." target="_blank" 
-style="display:inline-block;padding:15px 30px;background:#2f6bff;color:#fff;border-radius:30px;text-decoration:none;font-weight:bold;">
-Request Quote
 </a>
 </div>
+
+<div class="card" data-aos="fade-up">
+<img src="stargazer-cartenz.jpg">
+<h3>Stargazer Cartenz</h3>
+<div class="price">Mulai Rp 277.500.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Stargazer Cartenz" target="_blank">
+<button>Request Quote</button>
+</a>
 </div>
 
-<div class="card">
+<div class="card" data-aos="fade-up">
+<img src="creta.jpg">
+<h3>Creta</h3>
+<div class="price">Mulai Rp 363.150.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Creta" target="_blank">
+<button>Request Quote</button>
+</a>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="santa-fe.jpg">
+<h3>Santa Fe</h3>
+<div class="price">Mulai Rp 737.300.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Santa Fe" target="_blank">
+<button>Request Quote</button>
+</a>
+</div>
+
+<div class="card" data-aos="fade-up">
+<img src="palisade.jpg">
+<h3>Palisade</h3>
+<div class="price">Mulai Rp 1.133.400.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran Palisade" target="_blank">
+<button>Request Quote</button>
+</a>
+</div>
+
+<div class="card" data-aos="fade-up">
 <img src="ioniq5.jpg">
-<div class="card-content">
 <h3>IONIQ 5</h3>
 <div class="price">Mulai Rp 810.000.000</div>
+<a href="https://wa.me/6287772805133?text=Halo saya ingin penawaran IONIQ 5" target="_blank">
 <button>Request Quote</button>
-</div>
-</div>
-
+</a>
 </div>
 
-<footer>
-Hyundai Cirebon Official
-</footer>
+</section>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+duration:1200,
+once:true
+});
+</script>
 
 </body>
 </html>
