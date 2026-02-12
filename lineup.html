@@ -3,50 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Line Up Hyundai</title>
+<title>Lineup Hyundai</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:linear-gradient(180deg,#061a2f,#0b2c4f);
+background:linear-gradient(135deg,#071c2f,#0c2f4d);
 color:white;
 }
 
+/* HEADER */
 header{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 25px;
-background:#051423;
-position:fixed;
-width:100%;
-top:0;
-z-index:999;
+padding:15px 30px;
+background:#061826;
+z-index:1000;
 }
 
-header img{height:35px;}
+header img{
+height:40px;
+}
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
-font-size:14px;
+margin-left:25px;
+font-weight:bold;
 }
 
+nav a:hover{
+color:#00ffcc;
+}
+
+/* CARD */
 .container{
-margin-top:90px;
+margin-top:100px;
 padding:20px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
-background:#0f2e4d;
+background:#0d2c47;
 padding:20px;
 border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+box-shadow:0 0 15px rgba(0,255,200,0.2);
+transition:0.3s;
+}
+
+.card:hover{
+box-shadow:0 0 25px #00ffcc;
+transform:translateY(-5px);
 }
 
 .card img{
@@ -55,54 +69,62 @@ border-radius:15px;
 }
 
 .price{
-color:#00e676;
+color:#00ff99;
+font-size:18px;
 font-weight:bold;
 margin:10px 0;
 }
 
 button{
-padding:8px 15px;
+padding:10px 20px;
 border:none;
-border-radius:20px;
+border-radius:30px;
 cursor:pointer;
-margin-top:10px;
+font-weight:bold;
+margin:5px 5px 10px 0;
 }
 
-.toggle{
-background:#00bfa5;
-color:black;
+.btn-type{
+background:#00b3ff;
+color:white;
 }
 
-.wa{
+.btn-wa{
 background:#25D366;
 color:white;
-margin-left:10px;
 }
 
-.types{
-display:none;
-margin-top:10px;
-font-size:13px;
-line-height:1.6;
+.slide{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.6s ease;
 }
 
+.slide.open{
+max-height:1000px;
+}
+
+/* Kalkulator */
+.calc{
+margin-top:15px;
+}
+
+.calc input{
+width:80px;
+padding:5px;
+border-radius:8px;
+border:none;
+}
 </style>
-
-<script>
-function toggleType(id){
-let x=document.getElementById(id);
-x.style.display = x.style.display==="block" ? "none":"block";
-}
-</script>
-
 </head>
 
 <body>
 
 <header>
-<img src="logo-hyundai.png">
+<img src="logo.png">
 <nav>
 <a href="index.html">Home</a>
+<a href="lineup.html">Lineup</a>
 </nav>
 </header>
 
@@ -111,129 +133,56 @@ x.style.display = x.style.display==="block" ? "none":"block";
 <!-- STARGAZER -->
 <div class="card">
 <img src="stargazer.png">
-<h3>Stargazer</h3>
+<h2>Stargazer</h2>
 <div class="price">Mulai Rp 259.700.000</div>
-<button class="toggle" onclick="toggleType('sgz')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="sgz" class="types">
-Active MT – 259.700.000<br>
-Active IVT – 273.100.000<br>
-Essential MT 7 – 271.800.000<br>
-Essential MT 6 – 272.800.000<br>
-Essential IVT 7 – 283.500.000<br>
-Essential IVT 6 – 284.500.000<br>
-Essential Tech 7 – 304.000.000<br>
-Essential Tech 6 – 305.000.000<br>
-Prime IVT 7 (1 Tone) – 333.400.000<br>
-Prime IVT 7 (2 Tone) – 334.900.000<br>
-Prime IVT 6 (1 Tone) – 334.400.000<br>
-Prime IVT 6 (2 Tone) – 335.900.000<br>
-Style 6 Seat – 350.950.000<br>
-X Prime 6 (1 Tone) – 361.300.000<br>
-X Prime 6 (2 Tone) – 362.800.000<br>
-X Style 7 – 349.450.000<br>
-X Prime 7 (1 Tone) – 360.300.000<br>
-X Prime 7 (2 Tone) – 361.800.000
-</div>
-</div>
 
-<!-- STARGAZER CARTENZ -->
-<div class="card">
-<img src="cartenz.png">
-<h3>Stargazer Cartenz</h3>
-<div class="price">Mulai Rp 277.500.000</div>
-<button class="toggle" onclick="toggleType('cartenz')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="cartenz" class="types">
-Trend MT – 277.500.000<br>
-Trend IVT – 287.750.000<br>
-Style MT 7 – 298.000.000<br>
-Style MT Captain – 301.500.000<br>
-Style IVT 7 – 308.200.000<br>
-Style IVT Captain – 311.700.000<br>
-Smart IVT 7 – 341.750.000<br>
-Smart IVT Captain – 345.250.000<br>
-Prime IVT 7 – 359.700.000<br>
-Prime IVT Captain – 363.200.000
+<button class="btn-type" onclick="toggle('sgz')">Lihat Type</button>
+
+<div id="sgz" class="slide">
+<p onclick="wa('Stargazer Active MT')">Active MT – 259.700.000</p>
+<p onclick="wa('Stargazer Prime IVT')">Prime IVT – 333.400.000</p>
+
+<div class="calc">
+DP <input id="dp1" value="20000000">
+<button onclick="hitung(259700000,'dp1')">Hitung</button>
+<p id="hasil"></p>
+</div>
 </div>
 </div>
 
 <!-- CRETA -->
 <div class="card">
 <img src="creta.png">
-<h3>Creta</h3>
+<h2>Creta</h2>
 <div class="price">Mulai Rp 363.150.000</div>
-<button class="toggle" onclick="toggleType('creta')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="creta" class="types">
-Active – 363.150.000<br>
-Trend – 408.850.000<br>
-Prime – 440.000.000
+
+<button class="btn-type" onclick="toggle('creta')">Lihat Type</button>
+
+<div id="creta" class="slide">
+<p onclick="wa('Creta Prime')">Prime – 440.000.000</p>
 </div>
 </div>
 
-<!-- KONA EV -->
-<div class="card">
-<img src="kona.png">
-<h3>Kona EV</h3>
-<div class="price">Mulai Rp 566.250.000</div>
-<button class="toggle" onclick="toggleType('kona')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="kona" class="types">
-Style – 566.250.000<br>
-Prime – 584.500.000<br>
-Prime Extended – 635.500.000<br>
-Signature – 652.650.000<br>
-Signature Extended – 669.550.000<br>
-N Line – 690.550.000<br>
-N Line Two Tone – 693.550.000
-</div>
-</div>
-
-<!-- SANTA FE -->
-<div class="card">
-<img src="santafe.png">
-<h3>Santa Fe</h3>
-<div class="price">Mulai Rp 737.300.000</div>
-<button class="toggle" onclick="toggleType('santafe')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="santafe" class="types">
-G 2.5 Prime – 737.300.000<br>
-G 2.5 Calligraphy – 826.800.000<br>
-D 1.6 HEV Prime – 828.900.000<br>
-D 1.6 HEV Calligraphy – 916.200.000
-</div>
-</div>
-
-<!-- IONIQ 5 -->
-<div class="card">
-<img src="ioniq5.png">
-<h3>IONIQ 5</h3>
-<div class="price">Mulai Rp 810.000.000</div>
-<button class="toggle" onclick="toggleType('ioniq')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="ioniq" class="types">
-Prime Reguler – 810.000.000<br>
-Prime Extended – 852.500.000<br>
-Signature Reguler – 874.900.000<br>
-Signature Extended – 926.600.000
-</div>
-</div>
-
-<!-- PALISADE -->
-<div class="card">
-<img src="palisade.png">
-<h3>Palisade HEV</h3>
-<div class="price">Mulai Rp 1.133.400.000</div>
-<button class="toggle" onclick="toggleType('palisade')">Lihat Type</button>
-<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
-<div id="palisade" class="types">
-Signature GRG – 1.133.400.000<br>
-Calligraphy GRA – 1.306.200.000<br>
-Calligraphy AWD GRA – 1.393.300.000
-</div>
-</div>
+<!-- Tambahkan unit lain sama pola -->
 
 </div>
+
+<script>
+function toggle(id){
+document.getElementById(id).classList.toggle("open");
+}
+
+function wa(type){
+window.open("https://wa.me/6287772805133?text=Saya tertarik "+type,"_blank");
+}
+
+function hitung(harga,idDP){
+let dp=parseInt(document.getElementById(idDP).value);
+let cicilan=(harga-dp)/60;
+document.getElementById("hasil").innerHTML=
+"Estimasi Cicilan 60x: Rp "+Math.round(cicilan);
+}
+</script>
+
 </body>
 </html>
