@@ -170,6 +170,20 @@ button:hover{
 transform:scale(1.05);
 box-shadow:0 0 20px #2f6bff;
 }
+
+.car-img{
+width:100%;
+max-width:320px;
+display:block;
+margin:15px auto;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:0.4s;
+}
+
+.car-card:hover .car-img{
+transform:scale(1.05);
+}
 </style>
 </head>
 
@@ -191,11 +205,15 @@ box-shadow:0 0 20px #2f6bff;
 <section class="container">
 
 <div class="car-card" onclick="toggleAccordion(this)">
-  <div class="car-header">
-    <h3>Stargazer</h3>
-    <span class="arrow">▼</span>
-  </div>
-  <p class="price">Mulai Rp 259.700.000</p>
+    <div class="car-header">
+        <h3>Stargazer</h3>
+        <span class="arrow">▼</span>
+    </div>
+
+    <!-- GAMBAR TARUH DI SINI -->
+    <img src="stargazer.png" class="car-img">
+
+    <p class="price">Mulai Rp 259.700.000</p>
 </div>
 
 <div class="car-detail">
@@ -214,6 +232,10 @@ box-shadow:0 0 20px #2f6bff;
     <h3>Stargazer Cartenz</h3>
     <span class="arrow">▼</span>
   </div>
+
+  <!-- GAMBAR TARUH DI SINI -->
+    <img src="stargazer-cartenz.png" class="car-img">
+  
   <p class="price">Mulai Rp 277.500.000</p>
 </div>
 
