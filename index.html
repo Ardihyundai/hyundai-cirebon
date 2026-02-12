@@ -1,107 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ardi Hyundai Cirebon | Official Dealer</title>
-
-<link rel="icon" type="image/png" href="hyundai-logo.png">
+<title>Ardi Hyundai Cirebon</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-
 body{
-background:linear-gradient(180deg,#081428,#000);
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#071a2f;
 color:white;
 }
 
+/* HEADER */
 header{
-position:fixed;
-top:0;
-width:100%;
-padding:20px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(20px);
-z-index:1000;
+padding:15px 25px;
+background:#000;
 }
 
-header h2{
-letter-spacing:2px;
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+height:40px;
 }
 
 nav a{
 color:white;
-margin-left:25px;
 text-decoration:none;
-transition:0.3s;
+margin-left:20px;
+font-weight:bold;
 }
 
-nav a:hover{
-color:#2f6bff;
-}
-
+/* HERO */
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-flex-direction:column;
+height:90vh;
 background:url('ardi-banner.png') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 position:relative;
 }
 
 .hero::after{
-content:"";
+content:'';
 position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
 top:0;
 left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
 position:relative;
-z-index:1;
+z-index:2;
 }
 
 .hero h1{
-font-size:45px;
-margin-bottom:20px;
+font-size:42px;
+margin-bottom:15px;
 }
 
-.btn{
+.hero button{
 padding:15px 35px;
 border:none;
 border-radius:40px;
 background:linear-gradient(90deg,#2f6bff,#00c3ff);
 color:white;
-font-weight:bold;
+font-size:18px;
 cursor:pointer;
 transition:0.3s;
-text-decoration:none;
 }
 
-.btn:hover{
-transform:scale(1.05);
-box-shadow:0 0 25px #2f6bff;
+.hero button:hover{
+transform:scale(1.1);
 }
 
+/* SECTION */
 .section{
-padding:100px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
-footer{
-padding:40px;
-text-align:center;
-background:#000;
-font-size:14px;
+.section h2{
+font-size:32px;
+margin-bottom:20px;
 }
 </style>
 </head>
@@ -109,30 +101,32 @@ font-size:14px;
 <body>
 
 <header>
-<h2>HYUNDAI CIREBON</h2>
+<div class="logo-area">
+<img src="hyundai-logo.png">
+<h3>HYUNDAI CIREBON</h3>
+</div>
+
 <nav>
 <a href="index.html">Home</a>
 <a href="lineup.html">Line Up</a>
-<a href="contact.html">Contact</a>
 </nav>
 </header>
 
 <section class="hero">
 <div class="hero-content">
 <h1>Ardi Hyundai Cirebon</h1>
-<a class="btn" href="lineup.html">Explore Vehicles</a>
+<p>Authorized Hyundai Sales • Best Price • DP Ringan</p>
+<br>
+<a href="lineup.html">
+<button>Lihat Semua Unit</button>
+</a>
 </div>
 </section>
 
 <section class="section">
-<h2>Retail • Corporate • Fleet • Trade In</h2>
+<h2>Promo Terbaik Hyundai 2026</h2>
+<p>Diskon Besar • Free Admin • Bunga Ringan</p>
 </section>
-
-<footer>
-PT. Mulya Putra Citramobil<br>
-Sales Executive: Ardi Hyundai Cirebon<br>
-WA: 0877-7280-5133
-</footer>
 
 </body>
 </html>
