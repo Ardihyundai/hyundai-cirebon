@@ -3,191 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Line Up</title>
+<title>Line Up Hyundai Cirebon</title>
 
 <style>
 body{
 margin:0;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 background:#071a2f;
 color:white;
 }
 
 header{
+background:#000814;
+padding:15px 30px;
 display:flex;
+align-items:center;
 justify-content:space-between;
-align-items:center;
-padding:15px 25px;
-background:#000;
 }
 
-.logo-area{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo-area img{
-height:35px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin-left:20px;
-}
+header img{height:35px;}
 
 .container{
-padding:40px 20px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:25px;
+padding:40px;
 }
 
 .card{
-background:#0d2a4d;
+background:#0f2c4d;
 padding:20px;
 border-radius:15px;
-box-shadow:0 0 25px rgba(0,0,0,0.5);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
-.card img{
-width:100%;
-border-radius:12px;
-margin-bottom:15px;
+.card h2{
+margin-top:0;
 }
 
 .price{
-color:#00ff9d;
+color:#00ff88;
 font-weight:bold;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
-.type{
-margin:6px 0;
+ul{
+padding-left:18px;
+}
+
+ul li{
+margin-bottom:6px;
 font-size:14px;
 }
 
-.wa-btn{
+.wa{
 display:inline-block;
 margin-top:8px;
 padding:8px 15px;
 background:#25D366;
 color:white;
-border-radius:25px;
 text-decoration:none;
+border-radius:20px;
 font-size:13px;
 }
+
+.calc{
+margin-top:20px;
+background:#081c33;
+padding:15px;
+border-radius:10px;
+}
+
+input, select{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+border:none;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#00c3ff;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
 </style>
+
+<script>
+function hitung(){
+let harga = parseInt(document.getElementById("harga").value);
+let dp = parseInt(document.getElementById("dp").value);
+let tenor = parseInt(document.getElementById("tenor").value);
+let sisa = harga - dp;
+let cicilan = sisa/tenor;
+document.getElementById("hasil").innerHTML =
+"Perkiraan Cicilan: Rp "+ cicilan.toLocaleString("id-ID");
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
-<div class="logo-area">
 <img src="hyundai-logo.png">
-<h3>HYUNDAI CIREBON</h3>
-</div>
-
-<nav>
-<a href="index.html">Home</a>
-</nav>
+<div>HYUNDAI CIREBON</div>
 </header>
 
 <div class="container">
 
 <!-- STARGAZER -->
 <div class="card">
-<img src="stargazer.png">
-<h3>Stargazer</h3>
+<h2>Stargazer</h2>
 <div class="price">Mulai Rp 259.700.000</div>
-
-<div class="type">Active MT – Rp 259.700.000</div>
-<div class="type">Active IVT – Rp 273.100.000</div>
-<div class="type">Essential MT – Rp 271.800.000</div>
-<div class="type">Essential IVT – Rp 283.500.000</div>
-<div class="type">Prime IVT – Rp 333.400.000</div>
-<div class="type">Style – Rp 350.950.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+<ul>
+<li>Active MT – Rp 259.700.000</li>
+<li>Active IVT – Rp 273.100.000</li>
+<li>Essential MT 7 Seat – Rp 271.800.000</li>
+<li>Essential MT 6 Seat – Rp 272.800.000</li>
+<li>Essential IVT 7 Seat – Rp 283.500.000</li>
+<li>Essential IVT 6 Seat – Rp 284.500.000</li>
+<li>Essential Tech 7 Seat – Rp 304.000.000</li>
+<li>Essential Tech 6 Seat – Rp 305.000.000</li>
+<li>Prime IVT 7 Seat 1 Tone – Rp 333.400.000</li>
+<li>Prime IVT 7 Seat 2 Tone – Rp 334.900.000</li>
+<li>Prime IVT 6 Seat 1 Tone – Rp 334.400.000</li>
+<li>Prime IVT 6 Seat 2 Tone – Rp 335.900.000</li>
+<li>Style 6 Seat – Rp 350.950.000</li>
+<li>X Prime 6 Seat One Tone – Rp 361.300.000</li>
+<li>X Prime 6 Seat Two Tone – Rp 362.800.000</li>
+<li>X Style 7 Seat – Rp 349.450.000</li>
+<li>X Prime 7 Seat One Tone – Rp 360.300.000</li>
+<li>X Prime 7 Seat Two Tone – Rp 361.800.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
 </div>
 
-<!-- STARGAZER CARTENZ -->
+<!-- CARTENZ -->
 <div class="card">
-<img src="stargazer-cartenz.png">
-<h3>Stargazer Cartenz</h3>
+<h2>Stargazer Cartenz</h2>
 <div class="price">Mulai Rp 277.500.000</div>
-
-<div class="type">Trend MT – Rp 277.500.000</div>
-<div class="type">Trend IVT – Rp 287.750.000</div>
-<div class="type">Style MT – Rp 298.000.000</div>
-<div class="type">Prime IVT – Rp 359.700.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
-</div>
-
-<!-- CRETA -->
-<div class="card">
-<img src="creta.png">
-<h3>Creta</h3>
-<div class="price">Mulai Rp 363.150.000</div>
-
-<div class="type">New Creta Active – Rp 363.150.000</div>
-<div class="type">New Creta Trend – Rp 408.850.000</div>
-<div class="type">New Creta Prime – Rp 440.000.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+<ul>
+<li>Trend+MT – Rp 277.500.000</li>
+<li>Trend+IVT – Rp 287.750.000</li>
+<li>Style MT 7 Seat – Rp 298.000.000</li>
+<li>Style MT Captain – Rp 301.500.000</li>
+<li>Style IVT 7 Seat – Rp 308.200.000</li>
+<li>Style IVT Captain – Rp 311.700.000</li>
+<li>Smart IVT 7 Seat – Rp 341.750.000</li>
+<li>Smart IVT Captain – Rp 345.250.000</li>
+<li>Prime IVT 7 Seat – Rp 359.700.000</li>
+<li>Prime IVT Captain – Rp 363.200.000</li>
+<li>Cartenz X Trend 7 – Rp 371.750.000</li>
+<li>Cartenz X Trend Captain – Rp 375.250.000</li>
+<li>Cartenz X Style 7 – Rp 385.200.000</li>
+<li>Cartenz X Style Captain – Rp 388.700.000</li>
+<li>Cartenz X Prime 7 – Rp 402.200.000</li>
+<li>Cartenz X Prime Captain – Rp 405.700.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
 </div>
 
 <!-- KONA EV -->
 <div class="card">
-<img src="kona.png">
-<h3>Kona EV</h3>
+<h2>Kona EV 2026</h2>
 <div class="price">Mulai Rp 566.250.000</div>
-
-<div class="type">Style – Rp 566.250.000</div>
-<div class="type">Prime – Rp 584.500.000</div>
-<div class="type">Signature – Rp 652.650.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
-</div>
-
-<!-- SANTA FE -->
-<div class="card">
-<img src="santafe.png">
-<h3>Santa Fe</h3>
-<div class="price">Mulai Rp 737.300.000</div>
-
-<div class="type">Prime – Rp 737.300.000</div>
-<div class="type">Calligraphy – Rp 828.600.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+<ul>
+<li>Style Reguler – Rp 566.250.000</li>
+<li>Prime Reguler – Rp 584.500.000</li>
+<li>Prime Extended – Rp 635.500.000</li>
+<li>Signature Reguler – Rp 652.650.000</li>
+<li>Signature Reguler Two Tone – Rp 655.650.000</li>
+<li>Signature Extended – Rp 669.550.000</li>
+<li>Signature Extended Two Tone – Rp 672.550.000</li>
+<li>N Line – Rp 690.550.000</li>
+<li>N Line Two Tone – Rp 693.550.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
 </div>
 
 <!-- IONIQ 5 -->
 <div class="card">
-<img src="ioniq5.png">
-<h3>IONIQ 5</h3>
+<h2>IONIQ 5 2026</h2>
 <div class="price">Mulai Rp 810.000.000</div>
+<ul>
+<li>Prime Reguler – Rp 810.000.000</li>
+<li>Prime Extended – Rp 852.500.000</li>
+<li>Signature Reguler – Rp 874.900.000</li>
+<li>Signature Extended – Rp 926.600.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
+</div>
 
-<div class="type">Prime – Rp 810.000.000</div>
-<div class="type">Signature – Rp 926.600.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+<!-- SANTA FE -->
+<div class="card">
+<h2>Santa Fe 2026</h2>
+<div class="price">Mulai Rp 737.300.000</div>
+<ul>
+<li>G 2.5 AT Prime – Rp 737.300.000</li>
+<li>G 2.5 AT Calligraphy – Rp 826.800.000</li>
+<li>D 1.6 AT HEV Prime – Rp 828.900.000</li>
+<li>D 1.6 AT HEV Calligraphy – Rp 916.200.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
 </div>
 
 <!-- PALISADE -->
 <div class="card">
-<img src="palisade.png">
-<h3>Palisade</h3>
+<h2>Palisade 2026</h2>
 <div class="price">Mulai Rp 1.133.400.000</div>
-
-<div class="type">HEV Signature – Rp 1.133.400.000</div>
-<div class="type">HEV Calligraphy – Rp 1.393.300.000</div>
-
-<a class="wa-btn" href="https://wa.me/6287772805133" target="_blank">Chat WA</a>
+<ul>
+<li>HEV Signature GRG – Rp 1.133.400.000</li>
+<li>HEV Calligraphy GRA – Rp 1.306.200.000</li>
+<li>HEV Calligraphy AWD GRA – Rp 1.393.300.000</li>
+</ul>
+<a class="wa" href="https://wa.me/6287772805133">Chat WA</a>
 </div>
 
+</div>
+
+<div class="card calc" style="margin:40px;">
+<h2>Simulasi Kredit</h2>
+<input type="number" id="harga" placeholder="Masukkan Harga Mobil">
+<input type="number" id="dp" placeholder="Masukkan DP">
+<select id="tenor">
+<option value="12">12 Bulan</option>
+<option value="24">24 Bulan</option>
+<option value="36">36 Bulan</option>
+<option value="48">48 Bulan</option>
+<option value="60">60 Bulan</option>
+</select>
+<button onclick="hitung()">Hitung Cicilan</button>
+<div id="hasil" style="margin-top:10px;"></div>
 </div>
 
 </body>
