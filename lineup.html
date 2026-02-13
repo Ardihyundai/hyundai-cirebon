@@ -3,44 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Lineup Ultimate Boss</title>
+<title>Hyundai Official Digital Showroom</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial, sans-serif;
-background:#061a2b;
+background:#0b1c2d;
 color:white;
+scroll-behavior:smooth;
 }
 
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
+background:#061421;
 padding:15px 35px;
-background:#051423;
 position:sticky;
 top:0;
 z-index:1000;
-}
-
-.logo{
-height:42px;
-}
-
-nav{
-display:flex;
-gap:30px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
 font-weight:bold;
-}
-
-nav a:hover{
-color:#00ffff;
+font-size:18px;
 }
 
 .section{
@@ -49,41 +30,79 @@ border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .section h2{
-color:#00ffff;
+color:#00e0ff;
 margin-bottom:20px;
 }
 
-.type{
+.unit-img{
+width:100%;
+max-width:500px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 0 30px rgba(0,255,255,0.4);
+}
+
+/* TYPE BUTTON */
+
+.type-card{
+background:linear-gradient(145deg,#0e2b44,#081c2d);
+margin:12px 0;
+padding:18px;
+border-radius:16px;
+transition:0.3s;
+}
+
+.type-card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(0,255,255,0.6);
+}
+
+.type-title{
 display:flex;
 justify-content:space-between;
-align-items:center;
-margin:6px 0;
-flex-wrap:wrap;
-background:#0e2b44;
-padding:10px 15px;
-border-radius:8px;
+font-size:15px;
+margin-bottom:10px;
 }
 
 .price{
 color:#00ff90;
 font-weight:bold;
-margin-right:10px;
+}
+
+.button-group{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.btn{
+flex:1;
+text-align:center;
+padding:9px;
+border-radius:25px;
+font-size:13px;
+font-weight:bold;
+text-decoration:none;
 }
 
 .btn-wa{
 background:#25D366;
 color:white;
-padding:6px 15px;
-border-radius:20px;
-text-decoration:none;
-font-size:13px;
 }
+
+.btn-sim{
+background:#00e0ff;
+color:#061421;
+cursor:pointer;
+}
+
+/* Kalkulator */
 
 .calculator{
 background:#0e2b44;
 padding:25px;
 border-radius:12px;
-margin:50px 35px;
+margin:60px 35px;
 }
 
 .calculator input,
@@ -110,188 +129,218 @@ margin-top:10px;
 color:#00ff90;
 font-weight:bold;
 }
-.unit-img{
-width:100%;
-max-width:400px;
-margin:20px 0;
-border-radius:10px;
-box-shadow:0 0 20px rgba(0,255,255,0.3);
-} 
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-<img src="hyundai-logo.png" class="logo"> <!-- GANTI DENGAN NAMA FILE LOGO KAMU -->
-<nav>
-<a href="index.html">Home</a>
-<a href="lineup.html">Lineup</a>
-</nav>
-</header>
-
+<header>HYUNDAI OFFICIAL DIGITAL SHOWROOM</header>
 
 <!-- ================= STARGAZER ================= -->
 <div class="section">
 <h2>STARGAZER</h2>
 <img src="stargazer.png" class="unit-img">
-  
-<div class="type">Active MT <span><span class="price">259.700.000</span><a class="btn-wa" href="https://wa.me/6287772805133?text=Info Stargazer Active MT">WA</a></span></div>
-<div class="type">Active IVT <span><span class="price">273.100.000</span><a class="btn-wa" href="https://wa.me/6287772805133?text=Info Stargazer Active IVT">WA</a></span></div>
-<div class="type">Essential MT 7 Seat <span><span class="price">271.800.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Essential MT 6 Seat <span><span class="price">272.800.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Essential IVT 7 Seat <span><span class="price">283.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Essential IVT 6 Seat <span><span class="price">284.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Essential Tech 7 Seat <span><span class="price">304.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Essential Tech 6 Seat <span><span class="price">305.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT 7 Seat 1 Tone <span><span class="price">333.400.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT 7 Seat 2 Tone <span><span class="price">334.900.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT 6 Seat 1 Tone <span><span class="price">334.400.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT 6 Seat 2 Tone <span><span class="price">335.900.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Style 6 Seat <span><span class="price">350.950.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">X Prime 6 Seat 1 Tone <span><span class="price">361.300.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">X Prime 6 Seat 2 Tone <span><span class="price">362.800.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">X Style 7 Seat <span><span class="price">349.450.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">X Prime 7 Seat 1 Tone <span><span class="price">360.300.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">X Prime 7 Seat 2 Tone <span><span class="price">361.800.000</span><a class="btn-wa" href="#">WA</a></span></div>
+
+<script>
+function typeTemplate(name,price){
+return `
+<div class="type-card">
+<div class="type-title">
+<span>${name}</span>
+<span class="price">OTR ${price}</span>
+</div>
+<div class="button-group">
+<a class="btn btn-wa" href="https://wa.me/6287772805133?text=Info ${name}">WhatsApp</a>
+<a class="btn btn-sim" onclick="isiSimulasi(${price.replace(/\./g,'')})">Simulasi</a>
+</div>
+</div>`;
+}
+</script>
+
+<div id="stargazer-list"></div>
+
+<script>
+document.getElementById("stargazer-list").innerHTML = 
+typeTemplate("Active MT","259.700.000")+
+typeTemplate("Active IVT","273.100.000")+
+typeTemplate("Essential MT 7 Seat","271.800.000")+
+typeTemplate("Essential MT 6 Seat","272.800.000")+
+typeTemplate("Essential IVT 7 Seat","283.500.000")+
+typeTemplate("Essential IVT 6 Seat","284.500.000")+
+typeTemplate("Essential Tech 7 Seat","304.000.000")+
+typeTemplate("Essential Tech 6 Seat","305.000.000")+
+typeTemplate("Prime IVT 7 Seat 1 Tone","333.400.000")+
+typeTemplate("Prime IVT 7 Seat 2 Tone","334.900.000")+
+typeTemplate("Prime IVT 6 Seat 1 Tone","334.400.000")+
+typeTemplate("Prime IVT 6 Seat 2 Tone","335.900.000")+
+typeTemplate("Style 6 Seat","350.950.000")+
+typeTemplate("X Prime 6 Seat One Tone","361.300.000")+
+typeTemplate("X Prime 6 Seat Two Tone","362.800.000")+
+typeTemplate("X Style 7 Seat","349.450.000")+
+typeTemplate("X Prime 7 Seat One Tone","360.300.000")+
+typeTemplate("X Prime 7 Seat Two Tone","361.800.000");
+</script>
 
 </div>
-
-
 <!-- ================= STARGAZER CARTENZ ================= -->
 <div class="section">
 <h2>STARGAZER CARTENZ</h2>
 <img src="stargazer-cartenz.png" class="unit-img">
 
-<div class="type">Trend+MT <span><span class="price">277.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Trend+IVT <span><span class="price">287.750.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Style MT 7 Seat <span><span class="price">298.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Style MT Captain <span><span class="price">301.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Style IVT 7 Seat <span><span class="price">308.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Style IVT Captain <span><span class="price">311.700.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Smart IVT 7 Seat <span><span class="price">341.750.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Smart IVT Captain <span><span class="price">345.250.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT 7 Seat <span><span class="price">359.700.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime IVT Captain <span><span class="price">363.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Trend 7 Seat <span><span class="price">371.750.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Trend Captain <span><span class="price">375.250.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Style 7 Seat <span><span class="price">385.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Style Captain <span><span class="price">388.700.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Prime Package 7 Seat <span><span class="price">402.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Cartenz X Prime Package Captain <span><span class="price">405.700.000</span><a class="btn-wa" href="#">WA</a></span></div>
+<div id="cartenz-list"></div>
 
+<script>
+document.getElementById("cartenz-list").innerHTML =
+typeTemplate("Trend+MT","277.500.000")+
+typeTemplate("Trend+IVT","287.750.000")+
+typeTemplate("Style MT 7 Seat","298.000.000")+
+typeTemplate("Style MT Captain Seat","301.500.000")+
+typeTemplate("Style IVT 7 Seat","308.200.000")+
+typeTemplate("Style IVT Captain Seat","311.700.000")+
+typeTemplate("Smart IVT 7 Seat","341.750.000")+
+typeTemplate("Smart IVT Captain Seat","345.250.000")+
+typeTemplate("Prime IVT 7 Seat","359.700.000")+
+typeTemplate("Prime IVT Captain Seat","363.200.000")+
+typeTemplate("Cartenz X Trend 7 Seat","371.750.000")+
+typeTemplate("Cartenz X Trend Captain Seat","375.250.000")+
+typeTemplate("Cartenz X Style 7 Seat","385.200.000")+
+typeTemplate("Cartenz X Style Captain Seat","388.700.000")+
+typeTemplate("Cartenz X Prime Package 7 Seat","402.200.000")+
+typeTemplate("Cartenz X Prime Package Captain Seat","405.700.000");
+</script>
 </div>
-
-<!-- ================= SEMUA UNIT LANJUT DI SINI ================= -->
-  <!-- ================= CRETA ================= -->
+<!-- ================= CRETA ================= -->
 <div class="section">
 <h2>CRETA</h2>
 <img src="creta.png" class="unit-img">
 
-<div class="type">6 MT Active <span><span class="price">309.300.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Trend <span><span class="price">363.150.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Style <span><span class="price">408.850.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Prime (One Tone) <span><span class="price">440.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Prime (Two Tone) <span><span class="price">443.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Alpha (One Tone) <span><span class="price">456.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">IVT Alpha (Two Tone) <span><span class="price">459.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line (One Tone) <span><span class="price">474.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line (Two Tone) <span><span class="price">477.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line Turbo (One Tone) <span><span class="price">522.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line Turbo (Two Tone) <span><span class="price">525.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
+<div id="creta-list"></div>
 
+<script>
+document.getElementById("creta-list").innerHTML =
+typeTemplate("6 MT Active","309.300.000")+
+typeTemplate("IVT Trend","363.150.000")+
+typeTemplate("IVT Style","408.850.000")+
+typeTemplate("IVT Prime One Tone","440.000.000")+
+typeTemplate("IVT Prime Two Tone","443.000.000")+
+typeTemplate("IVT Alpha One Tone","456.500.000")+
+typeTemplate("IVT Alpha Two Tone","459.500.000")+
+typeTemplate("N Line One Tone","474.500.000")+
+typeTemplate("N Line Two Tone","477.500.000")+
+typeTemplate("N Line Turbo One Tone","522.500.000")+
+typeTemplate("N Line Turbo Two Tone","525.500.000");
+</script>
 </div>
-
-
 <!-- ================= KONA EV ================= -->
 <div class="section">
 <h2>KONA EV 2026</h2>
 <img src="kona-electric-vehicle.png" class="unit-img">
 
-<div class="type">Style Reguler <span><span class="price">566.250.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime Reguler <span><span class="price">584.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime Extended <span><span class="price">635.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Reguler <span><span class="price">652.650.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Reguler Two Tone <span><span class="price">655.650.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Extended <span><span class="price">669.550.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Extended Two Tone <span><span class="price">672.550.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line <span><span class="price">690.550.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">N Line Two Tone <span><span class="price">693.550.000</span><a class="btn-wa" href="#">WA</a></span></div>
+<div id="kona-list"></div>
 
+<script>
+document.getElementById("kona-list").innerHTML =
+typeTemplate("Style Reguler","566.250.000")+
+typeTemplate("Prime Reguler","584.500.000")+
+typeTemplate("Prime Extended","635.500.000")+
+typeTemplate("Signature Reguler","652.650.000")+
+typeTemplate("Signature Reguler Two Tone","655.650.000")+
+typeTemplate("Signature Extended","669.550.000")+
+typeTemplate("Signature Extended Two Tone","672.550.000")+
+typeTemplate("N Line","690.550.000")+
+typeTemplate("N Line Two Tone","693.550.000");
+</script>
 </div>
-
-
 <!-- ================= IONIQ 5 ================= -->
 <div class="section">
 <h2>IONIQ 5 2026</h2>
 <img src="ioniq5.jpg" class="unit-img">
-  
-<div class="type">Prime Reguler <span><span class="price">810.000.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Prime Extended <span><span class="price">852.500.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Reguler <span><span class="price">874.900.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">Signature Extended <span><span class="price">926.600.000</span><a class="btn-wa" href="#">WA</a></span></div>
 
+<div id="ioniq-list"></div>
+
+<script>
+document.getElementById("ioniq-list").innerHTML =
+typeTemplate("Prime Reguler","810.000.000")+
+typeTemplate("Prime Extended","852.500.000")+
+typeTemplate("Signature Reguler","874.900.000")+
+typeTemplate("Signature Extended","926.600.000");
+</script>
 </div>
-
-
 <!-- ================= SANTA FE ================= -->
 <div class="section">
-<h2>2026 ALL NEW SANTA FE</h2>
+<h2>2026 All New SANTA FE</h2>
 <img src="santa-fe.png" class="unit-img">
-  
-<div class="type">G 2.5 8AT Prime <span><span class="price">737.300.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">G 2.5 8AT Calligraphy <span><span class="price">826.800.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">D 1.6 8AT HEV Prime <span><span class="price">828.900.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">D 1.6 8AT HEV Calligraphy <span><span class="price">916.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
 
+<div id="santafe-list"></div>
+
+<script>
+document.getElementById("santafe-list").innerHTML =
+typeTemplate("G 2.5 8AT Prime","737.300.000")+
+typeTemplate("G 2.5 8AT Calligraphy","826.800.000")+
+typeTemplate("D 1.6 8AT HEV Prime","828.900.000")+
+typeTemplate("D 1.6 8AT HEV Calligraphy","916.200.000");
+</script>
 </div>
-
-
 <!-- ================= PALISADE ================= -->
 <div class="section">
 <h2>PALISADE HEV 2026</h2>
 <img src="palisade.png" class="unit-img">
-  
-<div class="type">HEV Signature GRG <span><span class="price">1.133.400.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">HEV Calligraphy GRA <span><span class="price">1.306.200.000</span><a class="btn-wa" href="#">WA</a></span></div>
-<div class="type">HEV Calligraphy AWD GRA <span><span class="price">1.393.300.000</span><a class="btn-wa" href="#">WA</a></span></div>
 
+<div id="palisade-list"></div>
+
+<script>
+document.getElementById("palisade-list").innerHTML =
+typeTemplate("HEV Signature GRG","1.133.400.000")+
+typeTemplate("HEV Calligraphy GRA","1.306.200.000")+
+typeTemplate("HEV Calligraphy AWD GRA","1.393.300.000");
+</script>
 </div>
 
-<!-- ================= SIMULASI KREDIT ================= -->
-<div class="calculator">
-<h3>Simulasi Kredit</h3>
+<!-- ================= LANJUTKAN SECTION UNIT LAIN DENGAN FORMAT SAMA ================= -->
+<!-- Kamu tinggal copy block di atas dan ganti id + data -->
 
-<input type="number" id="harga" placeholder="Masukkan Harga OTR">
-<input type="number" id="dp" placeholder="Masukkan DP">
+<!-- ================= KALKULATOR ================= -->
+
+<div class="calculator">
+<h3>Simulasi Kredit (Flat 3.5% / Tahun)</h3>
+
+<input type="number" id="harga" placeholder="Harga OTR">
+<input type="number" id="dp" placeholder="DP">
 <select id="tenor">
-<option value="12">1 Tahun</option>
-<option value="24">2 Tahun</option>
-<option value="36">3 Tahun</option>
-<option value="48">4 Tahun</option>
-<option value="60">5 Tahun</option>
+<option value="1">1 Tahun</option>
+<option value="2">2 Tahun</option>
+<option value="3">3 Tahun</option>
+<option value="4">4 Tahun</option>
+<option value="5">5 Tahun</option>
 </select>
 
-<button onclick="hitung()">Hitung Cicilan</button>
+<button onclick="hitung()">Hitung</button>
 <div class="result" id="hasil"></div>
 </div>
 
 <script>
+function isiSimulasi(harga){
+document.getElementById("harga").value = harga;
+window.scrollTo({
+top: document.querySelector(".calculator").offsetTop - 80,
+behavior: "smooth"
+});
+}
+
 function hitung(){
 let harga = parseInt(document.getElementById("harga").value);
 let dp = parseInt(document.getElementById("dp").value);
 let tenor = parseInt(document.getElementById("tenor").value);
 
 if(!harga || !dp){
-alert("Masukkan harga dan DP dulu");
+alert("Masukkan harga & DP dulu");
 return;
 }
 
-let sisa = harga - dp;
-let bunga = sisa * 0.1;
-let total = sisa + bunga;
-let cicilan = total / tenor;
+let pokok = harga - dp;
+let bunga = pokok * (0.035 * tenor);
+let total = pokok + bunga;
+let cicilan = total / (tenor*12);
 
 document.getElementById("hasil").innerHTML =
 "Estimasi Cicilan: Rp " + Math.round(cicilan).toLocaleString("id-ID") + " / bulan";
