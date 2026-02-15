@@ -670,14 +670,24 @@ function openTestDrive(unit = "") {
     document.getElementById("tdUnit").value = unit;
   }
 
+function openTestDrive(unit = "") {
+    document.getElementById("testDriveModal").style.display = "flex";
+    if(unit){
+        document.getElementById("tdUnit").value = unit;
+    }
+}
+
+function closeTestDrive() {
+    document.getElementById("testDriveModal").style.display = "none";
+}
+
 function kirimTestDrive(){
+    let nama = document.getElementById("tdNama").value;
+    let unit = document.getElementById("tdUnit").value;
+    let tanggal = document.getElementById("tdTanggal").value;
+    let lokasi = document.getElementById("tdLokasi").value;
 
-  let nama = document.getElementById("tdNama").value;
-  let unit = document.getElementById("tdUnit").value;
-  let tanggal = document.getElementById("tdTanggal").value;
-  let lokasi = document.getElementById("tdLokasi").value;
-
-  let pesan = `Halo Pak Ardi,
+    let pesan = `Halo Pak Ardi,
 Saya ingin booking test drive.
 
 Nama: ${nama}
@@ -685,9 +695,9 @@ Unit: ${unit}
 Tanggal: ${tanggal}
 Lokasi: ${lokasi}`;
 
-  let encoded = encodeURIComponent(pesan);
+    let encoded = encodeURIComponent(pesan);
 
-  window.open("https://wa.me/6287772805133?text=" + encoded, "_blank");
+    window.open("https://wa.me/6287772805133?text=" + encoded, "_blank");
 }
 </script>
 </body>
