@@ -96,6 +96,24 @@
   </div>
 </div>
 
+ <section class="simulasi-section" id="simulasi">
+  <h2>Simulasi Kredit Hyundai</h2>
+
+  <input type="number" id="harga" placeholder="Harga OTR">
+  <input type="number" id="dp" placeholder="DP">
+
+  <select id="tenor">
+    <option value="1">1 Tahun</option>
+    <option value="2">2 Tahun</option>
+    <option value="3">3 Tahun</option>
+    <option value="4">4 Tahun</option>
+    <option value="5">5 Tahun</option>
+  </select>
+
+  <button onclick="hitungSimulasi()">Hitung Cicilan</button>
+
+  <div class="hasil" id="hasil"></div>
+</section>
 <script src="global.js"></script>
 
 </body>
