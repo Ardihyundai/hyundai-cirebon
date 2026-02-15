@@ -1,0 +1,126 @@
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0b1c2d;
+  color:white;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 25px;
+  background:#081826;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.logo{height:28px;}
+
+.nav-desktop{
+  display:flex;
+  gap:20px;
+  align-items:center;
+}
+
+.nav-desktop a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.btn-testdrive{
+  background:#00c3ff;
+  border:none;
+  padding:8px 15px;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.lineup-section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.car-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:50px;
+}
+
+.car-card{
+  background:#102a42;
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.car-card:hover{
+  transform:translateY(-8px);
+}
+
+.car-card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.car-card button{
+  margin-top:15px;
+  background:#25D366;
+  border:none;
+  padding:10px 20px;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.modal-content{
+  background:#0e2b44;
+  padding:25px;
+  border-radius:15px;
+  width:90%;
+  max-width:400px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.modal-content input,
+.modal-content select{
+  padding:10px;
+  border:none;
+  border-radius:8px;
+}
+
+.modal-content button{
+  background:#25D366;
+  border:none;
+  padding:12px;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.close-modal{
+  align-self:flex-end;
+  cursor:pointer;
+  font-size:20px;
+}
+
+@media(max-width:900px){
+  .nav-desktop{display:none;}
+  .menu-toggle{display:block;}
+}
