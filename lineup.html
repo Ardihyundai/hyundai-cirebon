@@ -464,6 +464,55 @@ border-radius:8px;
 color:#00e0ff;
 font-weight:600;
 }
+/* ===== TEST DRIVE MODAL ===== */
+
+.testdrive-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+z-index:3000;
+justify-content:center;
+align-items:center;
+}
+
+.testdrive-content{
+background:#0e2b44;
+padding:25px;
+border-radius:15px;
+width:90%;
+max-width:400px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.testdrive-content input,
+.testdrive-content select{
+padding:10px;
+border:none;
+border-radius:8px;
+}
+
+.testdrive-content button{
+background:#25D366;
+color:white;
+border:none;
+padding:12px;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.close-modal{
+align-self:flex-end;
+font-size:20px;
+cursor:pointer;
+color:white;
+}
   
 </style>
 </head>
