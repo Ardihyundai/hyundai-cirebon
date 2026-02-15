@@ -339,4 +339,11 @@ header{
     bottom:15px;
     right:15px;
   }
+
+  html, body{
+  overflow-x: hidden;
+}
+  
+body{
+  margin:0;
 }
