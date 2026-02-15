@@ -124,3 +124,32 @@ header{
   .nav-desktop{display:none;}
   .menu-toggle{display:block;}
 }
+.simulasi-section{
+  padding:80px 20px;
+  text-align:center;
+  background:#081826;
+}
+
+.simulasi-section input,
+.simulasi-section select{
+  width:250px;
+  padding:10px;
+  margin:8px;
+  border-radius:8px;
+  border:none;
+}
+
+.simulasi-section button{
+  padding:12px 25px;
+  background:#00c3ff;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.hasil{
+  margin-top:15px;
+  font-weight:bold;
+  color:#00ff90;
+}
