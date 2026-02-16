@@ -71,11 +71,9 @@ function kirimTestDrive(){
     let alamat  = document.getElementById("tdAlamat").value;
     let tanggal = document.getElementById("tdTanggal").value;
     let lokasi  = document.getElementById("tdLokasi").value;
+    let unit = document.getElementById("tdUnit").value;
 
-    if(!nama || !telp || !alamat || !tanggal || !lokasi){
-        alert("Lengkapi semua data!");
-        return;
-    }
+    if(!nama || !telp || !alamat || !tanggal || !lokasi || !unit){
 
     let pesan =
 `Halo Ardi Hyundai Cirebon,
@@ -85,6 +83,7 @@ Nama: ${nama}
 No HP: ${telp}
 Alamat: ${alamat}
 Tanggal: ${tanggal}
+Unit: ${unit}
 Lokasi: ${lokasi}`;
 
     let encoded = encodeURIComponent(pesan);
