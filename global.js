@@ -1,15 +1,20 @@
-// MENU
+// ================= MENU =================
+
 function openMenu(){
   document.getElementById("sideMenu").classList.add("active");
   document.getElementById("overlay").classList.add("active");
+  document.body.classList.add("menu-open"); // stop scroll
 }
 
 function closeMenu(){
   document.getElementById("sideMenu").classList.remove("active");
   document.getElementById("overlay").classList.remove("active");
+  document.body.classList.remove("menu-open"); // aktifkan scroll lagi
 }
 
-// MODAL
+
+// ================= MODAL =================
+
 function openTestDrive(unit=""){
   const modal = document.getElementById("testDriveModal");
   modal.style.display = "flex";
@@ -25,7 +30,9 @@ function closeTestDrive(){
   document.body.style.overflow = "auto";
 }
 
-// FORMAT NOMOR INTERNASIONAL
+
+// ================= FORMAT NOMOR =================
+
 function formatPhone(value){
   let number = value.replace(/\D/g,'');
   if(number.startsWith("0")){
@@ -34,7 +41,9 @@ function formatPhone(value){
   return number;
 }
 
-// KIRIM TEST DRIVE
+
+// ================= KIRIM TEST DRIVE =================
+
 function kirimTestDrive(){
   let nama = document.getElementById("tdNama").value.trim();
   let telp = formatPhone(document.getElementById("tdTelp").value);
@@ -57,16 +66,14 @@ Tanggal: ${tanggal}
 Lokasi: ${lokasi}`;
 
   let encoded = encodeURIComponent(pesan);
-
-  // Placeholder tracking
-  console.log("Lead captured");
-
   window.open("https://wa.me/6287772805133?text="+encoded,"_blank");
 
   closeTestDrive();
 }
 
-// SIMULASI KREDIT
+
+// ================= SIMULASI KREDIT =================
+
 function hitungSimulasi(){
   let harga = parseInt(document.getElementById("harga").value);
   let dp = parseInt(document.getElementById("dp").value);
@@ -86,14 +93,4 @@ function hitungSimulasi(){
     "Estimasi Cicilan: Rp " +
     Math.round(cicilan).toLocaleString("id-ID") +
     " / bulan";
-}
-
-function openMenu(){
-    document.querySelector(".side-menu").classList.add("active");
-    document.body.classList.add("menu-open");
-}
-
-function closeMenu(){
-    document.querySelector(".side-menu").classList.remove("active");
-    document.body.classList.remove("menu-open");
 }
