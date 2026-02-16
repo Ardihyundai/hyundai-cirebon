@@ -346,3 +346,27 @@ header{
     opacity:0.75;
     margin-bottom:25px;
 }
+
+.btn-wa{
+    display:block;
+    background:#25D366;
+    color:#fff;
+    padding:14px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    margin-bottom:15px;
+    box-shadow:0 6px 20px rgba(37,211,102,0.4);
+}
+
+.btn-primary{
+    display:block;
+    width:100%;
+    background:linear-gradient(135deg,#1fa2ff,#0066ff);
+    color:#fff;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    box-shadow:0 6px 25px rgba(0,102,255,0.4);
+}
