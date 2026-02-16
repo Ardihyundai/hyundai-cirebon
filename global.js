@@ -74,6 +74,9 @@ function kirimTestDrive(){
     let unit = document.getElementById("tdUnit").value;
 
     if(!nama || !telp || !alamat || !tanggal || !lokasi || !unit){
+    alert("Lengkapi semua data!");
+    return;
+}
 
     let pesan = `Halo Ardi Hyundai Cirebon,
 
