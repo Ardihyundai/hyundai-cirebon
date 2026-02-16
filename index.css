@@ -59,15 +59,16 @@ header{
     position: fixed;
     top: 0;
     right: -100%;
-    width: 260px;
+    width: 85%;
+    max-width: 320px;
     height: 100vh;
     background: #061421;
-    padding: 25px 25px;
-    transition: right 0.3s ease;
+    padding: 25px 20px;
+    transition: 0.3s ease;
     z-index: 6000;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    overflow: hidden; /* penting */
 }
 
 
@@ -345,4 +346,8 @@ header{
   
 body{
   margin:0;
+}
+
+body.menu-open{
+    overflow: hidden;
 }
