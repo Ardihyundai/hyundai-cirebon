@@ -62,7 +62,7 @@ header{
     width: 260px;
     height: 100vh;
     background: #061421;
-    padding: 80px 25px;
+    padding: 25px 25px;
     transition: right 0.3s ease;
     z-index: 6000;
     display: flex;
