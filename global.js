@@ -240,8 +240,8 @@ document.addEventListener("DOMContentLoaded", function () {
   buttons.forEach((btn) => {
     btn.addEventListener("click", function () {
 
-      const parent = this.closest(".car-block");
-      const content = parent.querySelector(".accordion-content");
+      const accordion = this.closest(".accordion");
+      const content = accordion.querySelector(".accordion-content");
 
       if (!content) return;
 
