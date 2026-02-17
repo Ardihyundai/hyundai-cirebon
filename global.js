@@ -213,30 +213,38 @@ Terima kasih.`;
     closeSPK();
 }
 
-/* =====================================
+/* ==============================
    ANIMASI SCROLL
-===================================== */
+============================== */
 
-window.addEventListener("scroll", ()=>{
-    const cards = document.querySelectorAll(".car-block");
+window.addEventListener("scroll", () => {
+  const cards = document.querySelectorAll(".car-block");
 
-    cards.forEach(card=>{
-        const rect = card.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100){
-            card.classList.add("show");
-        }
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.classList.add("show");
+    }
+  });
+});
 
-       // ACCORDION LINEUP
-document.addEventListener("DOMContentLoaded", function(){
 
-  const accButtons = document.querySelectorAll(".accordion-btn");
+/* ==============================
+   ACCORDION LINEUP
+============================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const accButtons = document.querySelectorAll(".accordion-btn, .btn-type");
 
   accButtons.forEach(button => {
-    button.addEventListener("click", function(){
+    button.addEventListener("click", function () {
 
       const content = this.nextElementSibling;
 
-      if(content.style.display === "block"){
+      if (!content) return;
+
+      if (content.style.display === "block") {
         content.style.display = "none";
       } else {
         content.style.display = "block";
@@ -245,6 +253,4 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
-});
-    });
 });
