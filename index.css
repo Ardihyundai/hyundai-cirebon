@@ -234,14 +234,16 @@ font-size:14px;
 
 /* ===== HAMBURGER ===== */
 .hamburger {
-  font-size: 28px;
-  color: #00c3ff;
-  cursor: pointer;
+    font-size: 30px;
+    color: #00c3ff;
+    cursor: pointer;
 
-  position: absolute;
-  right: 30px;   /* atur jarak dari kanan */
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 10001;
 }
 
 /* ===== SIDE MENU ===== */
