@@ -10,10 +10,31 @@
 
 <body>
 
-<header>
-<img src="hyundai-logo.png" class="logo">
-<div class="hamburger" onclick="openMenu()">☰</div>
+<header class="main-header">
+   <div class="header-left">
+      <img src="hyundai-logo.png" class="header-logo">
+      <div class="header-text">
+         <div class="official">OFFICIAL SALES</div>
+         <div class="brand">ARDI HYUNDAI CIREBON</div>
+      </div>
+   </div>
+
+   <div class="hamburger" onclick="toggleMenu()">
+      ☰
+   </div>
 </header>
+
+<div id="overlay" onclick="closeMenu()"></div>
+
+<div id="sideMenu">
+   <a href="index.html">Home</a>
+   <a href="lineup.html">Lineup</a>
+   <a href="promo-hyundai-cirebon-2026.html">Promo</a>
+   <a href="spk.html">SPK</a>
+   <a href="artikel-hyundai-cirebon.html">Artikel</a>
+   <a href="tentang.html">Tentang</a>
+   <a href="contact.html">Kontak</a>
+</div>
 
 <section class="lineup-section">
 
