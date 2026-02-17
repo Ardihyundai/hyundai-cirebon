@@ -135,6 +135,66 @@
 <button onclick="openTestDrive('Palisade')" class="btn-test">Test Drive</button>
 <a href="spk.html" class="btn-spk">Buat SPK</a>
 </div>
+<!-- ================= SIMULASI MODAL ================= -->
+<div id="simulasiModal" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeSimulasi()">×</span>
+
+<h2>Simulasi Kredit</h2>
+
+<input type="hidden" id="unitMobil">
+
+<label>Harga OTR</label>
+<input type="number" id="hargaOTR" placeholder="Masukkan harga">
+
+<label>DP (%)</label>
+<input type="number" id="dpPersen" placeholder="Contoh: 20">
+
+<label>Tenor (Tahun)</label>
+<select id="tenor">
+<option value="1">1 Tahun</option>
+<option value="2">2 Tahun</option>
+<option value="3">3 Tahun</option>
+<option value="4">4 Tahun</option>
+<option value="5">5 Tahun</option>
+</select>
+
+<button onclick="hitungCicilan()" class="btn-primary">Hitung Cicilan</button>
+
+<div id="hasilCicilan"></div>
+
+<button onclick="kirimWA()" class="btn-wa">Kirim ke WhatsApp</button>
+
+</div>
+</div>
+
+
+<!-- ================= TEST DRIVE MODAL ================= -->
+<div id="testDriveModal" class="modal">
+<div class="modal-content">
+
+<span class="close" onclick="closeTestDrive()">×</span>
+
+<h2>Form Test Drive</h2>
+
+<input type="text" id="tdNama" placeholder="Nama Lengkap">
+<input type="text" id="tdAlamat" placeholder="Alamat">
+<input type="text" id="tdTelp" placeholder="No Telp">
+<input type="hidden" id="tdUnit">
+
+<label>Tanggal</label>
+<input type="date" id="tdTanggal">
+
+<label>Lokasi</label>
+<select id="tdLokasi">
+<option value="Rumah">Rumah</option>
+<option value="Dealer">Dealer</option>
+</select>
+
+<button onclick="kirimTestDrive()" class="btn-primary">Kirim Permintaan</button>
+
+</div>
 </div>
 
 </section>
