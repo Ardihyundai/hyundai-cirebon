@@ -231,9 +231,21 @@ function aturDPMode(){
   } else {
       dpInput.removeAttribute("readonly");
   }
-}
+document.addEventListener("DOMContentLoaded", function(){
+
+  const hargaInput = document.getElementById("hargaOTR");
+
+  if(hargaInput){
+    hargaInput.addEventListener("input", function(){
+        const mode = document.getElementById("dpMode").value;
+
+        if(mode === "auto"){
+            document.getElementById("dpPersen").value = 20;
+        }
+    });
+
 
     });
   });
 
-});
+
