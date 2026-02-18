@@ -40,7 +40,33 @@ function filterModel(model){
    SIMULASI KREDIT
 ===================================== */
 
-function openSimulasi(unitNama, hargaOTR){
+function hitungCicilan() {
+
+  const harga = parseFloat(document.getElementById("hargaOTR").value);
+  const dpPersen = parseFloat(document.getElementById("dpPersen").value);
+  const tenor = parseInt(document.getElementById("tenor").value);
+
+  if (!harga || !dpPersen || !tenor) {
+      document.getElementById("hasilCicilan").innerHTML = "Isi semua data dulu!";
+      return;
+  }
+
+  const dp = harga * (dpPersen / 100);
+  const sisa = harga - dp;
+
+  // 🔥 BUNGA 5% PER TAHUN
+  const bungaPerTahun = 0.05;
+  const totalBunga = sisa * bungaPerTahun * tenor;
+  const totalBayar = sisa + totalBunga;
+
+  const cicilan = totalBayar / (tenor * 12);
+
+  document.getElementById("hasilCicilan").innerHTML =
+      "DP: Rp " + dp.toLocaleString("id-ID") +
+      "<br><b>Angsuran per bulan: Rp " +
+      Math.round(cicilan).toLocaleString("id-ID") +
+      "</b>";
+}
     const modal = document.getElementById("simulasiModal");
     if(modal) modal.style.display = "flex";
 
