@@ -65,44 +65,30 @@ function closeSimulasi(){
     document.body.style.overflow = "auto";
 }
 
-function hitungSimulasi(){
+function hitungCicilan() {
 
-    let harga = parseInt(document.getElementById("hargaOTR").value);
-    let dpPersen = parseInt(document.getElementById("dpPersen").value);
-    let tenor = parseInt(document.getElementById("tenor").value);
+  const harga = parseFloat(document.getElementById("hargaOTR").value);
+  const dpPersen = parseFloat(document.getElementById("dpPersen").value);
+  const tenor = parseInt(document.getElementById("tenor").value);
 
-    if(!harga || !dpPersen || !tenor){
-        alert("Lengkapi semua data!");
-        return;
-    }
+  if (!harga || !dpPersen || !tenor) {
+    document.getElementById("hasilCicilan").innerHTML = "Isi semua data dulu!";
+    return;
+  }
 
-    if(dpPersen < 20){
-        alert("DP minimal 20%");
-        return;
-    }
+  const dp = harga * (dpPersen / 100);
+  const sisa = harga - dp;
 
-    let dp = harga * dpPersen / 100;
-    let pokok = harga - dp;
+  const bungaPerTahun = 0.035; // 3.5%
+  const totalBunga = sisa * bungaPerTahun * tenor;
+  const totalBayar = sisa + totalBunga;
 
-    let bunga = pokok * (0.035 * tenor);
-    let total = pokok + bunga;
-    let cicilan = total / (tenor * 12);
+  const cicilan = totalBayar / (tenor * 12);
 
-    document.getElementById("hasilCicilan").innerHTML =
-        "Estimasi Cicilan: Rp " +
-        Math.round(cicilan).toLocaleString("id-ID") +
-        " / bulan";
+  document.getElementById("hasilCicilan").innerHTML =
+    "DP: Rp " + dp.toLocaleString("id-ID") +
+    "<br>Cicilan per bulan: Rp " + cicilan.toLocaleString("id-ID");
 
-    let pesan = `Halo Ardi Hyundai,
-
-Simulasi Kredit:
-Harga OTR: Rp ${harga.toLocaleString("id-ID")}
-DP: ${dpPersen}%
-Tenor: ${tenor} Tahun
-Estimasi Cicilan: Rp ${Math.round(cicilan).toLocaleString("id-ID")} / bulan`;
-
-    document.getElementById("btnKirimWA").href =
-        "https://wa.me/6287772805133?text=" + encodeURIComponent(pesan);
 }
 
 /* =====================================
