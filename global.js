@@ -213,5 +213,20 @@ document.addEventListener("scroll", function(){
     if(position < screenPosition){
       el.classList.add("show");
     }
+
+     function filterUnit(unit){
+  const cards = document.querySelectorAll(".unit-card");
+
+  cards.forEach(card=>{
+    if(unit === "all"){
+      card.style.display = "block";
+    } else {
+      if(card.innerText.includes(unit)){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
   });
-});
+}
+  
