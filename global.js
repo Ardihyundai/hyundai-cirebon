@@ -226,7 +226,65 @@ document.addEventListener("scroll", function(){
       } else {
         card.style.display = "none";
       }
-    }
+    const dataSPK = {
+"Stargazer":{
+"Active MT":259700000,
+"Active IVT":273100000
+},
+"Kona EV":{
+"Prime Reguler":584500000,
+"Signature Extended":669550000
+},
+"IONIQ 5":{
+"Prime Reguler":810000000,
+"Signature Extended":926600000
+}
+};
+
+function loadTypeSPK(){
+let unit = document.getElementById("unit").value;
+let typeSelect = document.getElementById("type");
+typeSelect.innerHTML = '<option value="">Pilih Type</option>';
+
+if(dataSPK[unit]){
+for(let t in dataSPK[unit]){
+let opt = document.createElement("option");
+opt.value = t;
+opt.textContent = t;
+typeSelect.appendChild(opt);
+}
+}
+}
+
+function setOTR(){
+let unit = document.getElementById("unit").value;
+let type = document.getElementById("type").value;
+
+if(dataSPK[unit] && dataSPK[unit][type]){
+document.getElementById("otr").value =
+"Rp " + dataSPK[unit][type].toLocaleString("id-ID");
+}
+}
+
+function kirimSPK(){
+let nama = document.getElementById("nama").value;
+let unit = document.getElementById("unit").value;
+let type = document.getElementById("type").value;
+let otr = document.getElementById("otr").value;
+let bank = document.getElementById("bank").value;
+
+let pesan = `SPK Hyundai Cirebon
+
+Nama: ${nama}
+Unit: ${unit}
+Type: ${type}
+OTR: ${otr}
+Bank Transfer: ${bank}
+
+PT. Mulya Putra Citramobil`;
+
+window.open("https://wa.me/6287772805133?text=" + encodeURIComponent(pesan));
+}
   });
 }
   
