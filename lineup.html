@@ -273,90 +273,62 @@
 Chat WhatsApp
 </a>
 
-  <!-- ===============================
-     MODAL SIMULASI
-================================ -->
-<div id="simulasiModal" style="
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-z-index:9999;
-">
+  <!-- ================= SIMULASI MODAL ================= -->
+<div id="simulasiModal" class="simulasi-overlay">
 
-<div style="
-background:#0f172a;
-padding:25px;
-width:90%;
-max-width:400px;
-border-radius:12px;
-color:white;
-">
+  <div class="simulasi-box">
+    <h2>Simulasi Kredit</h2>
 
-<h3 style="margin-top:0;">Simulasi Kredit</h3>
+    <label>Unit</label>
+    <select id="unitSelect" onchange="loadType()">
+      <option value="">Pilih Unit</option>
+      <option>Stargazer</option>
+      <option>Stargazer Cartenz</option>
+      <option>Creta</option>
+      <option>Kona EV</option>
+      <option>IONIQ 5</option>
+      <option>Santa Fe</option>
+      <option>Palisade</option>
+    </select>
 
-<select id="unitSelect" onchange="loadType()">
-<option value="">Pilih Unit</option>
-<option>Stargazer</option>
-<option>Stargazer Cartenz</option>
-<option>Creta</option>
-<option>Kona EV</option>
-<option>IONIQ 5</option>
-<option>Santa Fe</option>
-<option>Palisade</option>
-</select>
+    <label>Type</label>
+    <select id="typeSelect" onchange="isiOTR()">
+      <option value="">Pilih Type</option>
+    </select>
 
-<br><br>
+    <label>Harga OTR</label>
+    <input type="text" id="hargaOTR" readonly>
 
-<select id="typeSelect" onchange="isiOTR()">
-<option value="">Pilih Type</option>
-</select>
+    <label>DP</label>
+    <select id="dpMode" onchange="setDPMode()">
+      <option value="20">DP 20% (Rekomendasi)</option>
+      <option value="manual">Input Manual</option>
+    </select>
 
-<br><br>
+    <input type="text" id="dpInput" placeholder="Masukkan DP Manual" style="display:none;">
 
-<input type="number" id="hargaOTR" placeholder="Harga OTR">
+    <label>Tenor</label>
+    <select id="tenor">
+      <option value="">Pilih Tenor</option>
+      <option value="1">1 Tahun</option>
+      <option value="2">2 Tahun</option>
+      <option value="3">3 Tahun</option>
+      <option value="4">4 Tahun</option>
+      <option value="5">5 Tahun</option>
+    </select>
 
-<br><br>
+    <button class="btn-hitung" onclick="hitungSimulasi()">Hitung</button>
 
-<input type="number" id="dpPersen" placeholder="DP (%)">
+    <div id="hasilCicilan" class="hasil-box"></div>
 
-<br><br>
+    <p class="disclaimer">
+      *Simulasi ini bukan perhitungan resmi leasing/bank.
+      Angka dapat berubah sesuai kebijakan pembiayaan.*
+    </p>
 
-<input type="number" id="tenor" placeholder="Tenor (Tahun)">
-
-<br><br>
-
-<button onclick="hitungSimulasi()" style="
-background:#00bfff;
-border:none;
-padding:10px;
-width:100%;
-border-radius:8px;
-font-weight:bold;
-">Hitung</button>
-
-<br><br>
-
-<div id="hasilCicilan"></div>
-
-<br>
-
-<button onclick="closeSimulasi()" style="
-background:red;
-border:none;
-padding:8px;
-width:100%;
-border-radius:8px;
-color:white;
-">Tutup</button>
-
+    <button class="btn-tutup" onclick="closeSimulasi()">Tutup</button>
+  </div>
 </div>
-
 </body>
 </html>
   
