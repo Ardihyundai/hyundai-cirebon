@@ -2,17 +2,15 @@
    HAMBURGER MENU
 ==============================*/
 function toggleMenu() {
-  const menu = document.getElementById("sideMenu");
-  menu.classList.toggle("active");
+  document.getElementById("sideMenu").classList.toggle("active");
 }
 
 function closeMenu() {
-  const menu = document.getElementById("sideMenu");
-  menu.classList.remove("active");
+  document.getElementById("sideMenu").classList.remove("active");
 }
 
 /* ==============================
-   ACCORDION UNIT
+   ACCORDION
 ==============================*/
 function toggleAccordion(id) {
   const content = document.getElementById(id);
@@ -20,7 +18,26 @@ function toggleAccordion(id) {
 }
 
 /* ==============================
-   DATA UNIT & TYPE (OTR 2026)
+   FILTER UNIT (FIX TOTAL)
+==============================*/
+function filterUnit(unit){
+  const cards = document.querySelectorAll(".unit-card");
+
+  cards.forEach(card=>{
+    if(unit === "all"){
+      card.style.display = "block";
+    } else {
+      if(card.dataset.unit === unit){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+}
+
+/* ==============================
+   DATA MOBIL
 ==============================*/
 const mobilData = {
   "Stargazer": {
