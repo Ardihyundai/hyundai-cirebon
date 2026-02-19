@@ -30,14 +30,14 @@
 </section>
   
 <div style="text-align:center;margin-bottom:20px;">
-<button class="btn btn-outline" onclick="filterUnit('all')">ALL</button>
-<button class="btn btn-outline" onclick="filterUnit('Stargazer')">STARGAZER</button>
-<button class="btn btn-outline" onclick="filterUnit('Stargazer Cartenz')">CARTENZ</button>
-<button class="btn btn-outline" onclick="filterUnit('Creta')">CRETA</button>
-<button class="btn btn-outline" onclick="filterUnit('Kona EV')">KONA</button>
-<button class="btn btn-outline" onclick="filterUnit('IONIQ 5')">IONIQ</button>
-<button class="btn btn-outline" onclick="filterUnit('Santa Fe')">SANTA FE</button>
-<button class="btn btn-outline" onclick="filterUnit('Palisade')">PALISADE</button>
+<button onclick="filterUnit('all')">ALL</button>
+<button onclick="filterUnit('stargazer')">STARGAZER</button>
+<button onclick="filterUnit('cartenz')">CARTENZ</button>
+<button onclick="filterUnit('creta')">CRETA</button>
+<button onclick="filterUnit('kona')">KONA</button>
+<button onclick="filterUnit('ioniq')">IONIQ</button>
+<button onclick="filterUnit('santafe')">SANTA FE</button>
+<button onclick="filterUnit('palisade')">PALISADE</button>
 </div>
 <!-- ================= STARGAZER ================= -->
 <div class="unit-card" data-unit="stargazer">
@@ -168,7 +168,7 @@
 </div>
 
 <!-- ================= KONA EV ================= -->
-<div class="unit-card">
+<div class="unit-card" data-unit="kona">
 <div class="badge badge-EV">BEST EV</div>
   <img src="kona-electric-vehicle.png" class="unit-img">
 <h2>KONA EV</h2>
@@ -200,7 +200,7 @@
 </div>
 
 <!-- ================= IONIQ 5 ================= -->
-<div class="unit-card">
+<div class="unit-card" data-unit="ioniq">
 <div class="badge badge-EV">BEST EV</div>
   <img src="ioniq5.jpg" class="unit-img">
 <h2>IONIQ 5</h2>
@@ -223,7 +223,7 @@
 </div>
 
 <!-- ================= SANTA FE ================= -->
-<div class="unit-card">
+<div class="unit-card" data-unit="santafe">
 <div class="badge badge-premium">BEST PREMIUM</div>
   <img src="santa-fe.png" class="unit-img">
 <h2>SANTA FE</h2>
@@ -246,7 +246,7 @@
 </div>
 
 <!-- ================= PALISADE ================= -->
-<div class="unit-card">
+<div class="unit-card" data-unit="palisade">
 <div class="badge badge-premium">BEST PREMIUM</div>
   <img src="palisade.png" class="unit-img">
 <h2>PALISADE</h2>
