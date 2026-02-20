@@ -93,4 +93,15 @@ function kirimTestDrive(){
 
   window.open("https://wa.me/6281234567890?text="+text);
 }
+
+// =============================
+// HAMBURGER MENU
+// =============================
+function toggleMenu(){
+  document.getElementById("sideMenu").classList.toggle("active");
+}
+
+function closeMenu(){
+  document.getElementById("sideMenu").classList.remove("active");
+}
 </script>
