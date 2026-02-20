@@ -23,8 +23,13 @@
 <div class="side-menu" id="sideMenu">
   <div class="menu-close" onclick="closeMenu()">✕</div>
   <a href="index.html">Home</a>
-  <a href="#" onclick="openSimulasi();closeMenu()">Simulasi Kredit</a>
-  <a href="#" onclick="openTestDrive();closeMenu()">Test Drive</a>
+  <a href="#" onclick="openSimulasi(); closeMenu(); return false;">
+  Simulasi Kredit
+</a>
+
+<a href="#" onclick="openTestDrive(); closeMenu(); return false;">
+  Test Drive
+</a>
   <a href="spk.html">SPK</a>
   <a href="artikel.html">Artikel</a>
   <a href="dealer.html">Tentang</a>
