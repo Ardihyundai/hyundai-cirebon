@@ -333,3 +333,35 @@ document.addEventListener("click", function(e){
       menu.classList.remove("active");
   }
 });
+/* ===== KIRIM TEST DRIVE KE WA ===== */
+
+function kirimTestDriveWA(){
+
+const nama = document.getElementById("tdNama")?.value || "";
+const alamat = document.getElementById("tdAlamat")?.value || "";
+const hp = document.getElementById("tdHP")?.value || "";
+const unit = document.getElementById("tdUnit")?.value || "";
+const lokasi = document.getElementById("tdLokasi")?.value || "";
+
+if(!nama || !hp){
+  alert("Nama & No HP wajib diisi");
+  return;
+}
+
+const pesan = `Halo Ardi Hyundai 👋
+
+Saya ingin booking Test Drive:
+
+Nama: ${nama}
+Alamat: ${alamat}
+No HP: ${hp}
+Unit: ${unit}
+Lokasi Test Drive: ${lokasi}
+
+Mohon info jadwal tersedia 🙏`;
+
+const noAdmin = "6287772805133"; // Ganti jika perlu
+
+window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`,"_blank");
+
+}
