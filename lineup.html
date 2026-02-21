@@ -245,6 +245,77 @@ HEV Calligraphy AWD GRA - Rp 1.393.300.000
 <footer>
 © 2026 Official Sales Ardi Hyundai
 </footer>
+<!-- MODAL SIMULASI -->
+<div id="modalSimulasi" class="modal">
+  <div class="modal-content">
+    <h2>Kalkulator Simulasi Kredit</h2>
 
+    <select id="unitSelect" onchange="loadType()">
+      <option value="">Pilih Unit</option>
+      <option value="Stargazer">Stargazer</option>
+      <option value="Stargazer Cartenz">Stargazer Cartenz</option>
+      <option value="Creta">Creta</option>
+      <option value="Kona EV">Kona EV</option>
+      <option value="IONIQ 5">IONIQ 5</option>
+      <option value="Santa Fe">Santa Fe</option>
+      <option value="Palisade">Palisade</option>
+    </select>
+
+    <select id="typeSelect" onchange="isiOTR()">
+      <option value="">Pilih Type</option>
+    </select>
+
+    <input type="text" id="hargaOTR" placeholder="Harga OTR" readonly>
+
+    <button onclick="isiDP20()">DP 20%</button>
+
+    <input type="text" id="dpManual" placeholder="Atau Masukkan DP Manual">
+
+    <select id="tenor">
+      <option value="1">1 Tahun</option>
+      <option value="2">2 Tahun</option>
+      <option value="3">3 Tahun</option>
+      <option value="4">4 Tahun</option>
+      <option value="5">5 Tahun</option>
+    </select>
+
+    <button onclick="hitungSimulasi()">Hitung Simulasi</button>
+    <div id="hasilSimulasi"></div>
+
+    <button onclick="kirimSimulasiWA()">Kirim ke WhatsApp</button>
+    <button onclick="generatePDF()">Download PDF</button>
+    <button onclick="closeSimulasi()">Tutup</button>
+  </div>
+</div>
+<!-- MODAL TEST DRIVE -->
+<div id="modalTestDrive" class="modal">
+  <div class="modal-content">
+    <h2>Form Booking Test Drive</h2>
+
+    <input type="text" id="tdNama" placeholder="Nama Lengkap">
+    <input type="text" id="tdAlamat" placeholder="Alamat">
+    <input type="text" id="tdHP" placeholder="No HP">
+
+    <select id="tdUnit">
+      <option value="">Pilih Unit</option>
+      <option value="Stargazer">Stargazer</option>
+      <option value="Stargazer Cartenz">Stargazer Cartenz</option>
+      <option value="Creta">Creta</option>
+      <option value="Kona EV">Kona EV</option>
+      <option value="IONIQ 5">IONIQ 5</option>
+      <option value="Santa Fe">Santa Fe</option>
+      <option value="Palisade">Palisade</option>
+    </select>
+
+    <select id="tdLokasi">
+      <option value="Dealer">Dealer</option>
+      <option value="Rumah">Rumah</option>
+    </select>
+
+    <button onclick="kirimTestDriveWA()">WhatsApp</button>
+    <button onclick="closeTestDrive()">Tutup</button>
+  </div>
+</div>
+  
 </body>
 </html>
