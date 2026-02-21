@@ -121,60 +121,143 @@ function loadType(){
 }
 
 
-// ===============================
-// ISI OTR OTOMATIS
-// ===============================
-function isiOTR(){
+/* ===============================
+   DATA HARGA OTR
+================================ */
+
+const hargaData = {
+  "Creta": {
+    "Active MT": 309300000,
+    "Trend IVT": 363150000,
+    "Style IVT": 408850000
+  },
+  "Stargazer": {
+    "Active MT": 259700000,
+    "Prime IVT": 333400000
+  },
+  "Kona EV": {
+    "Prime": 584500000,
+    "Signature": 652650000
+  }
+};
+
+/* ===============================
+   LOAD TYPE OTOMATIS
+================================ */
+
+function loadType() {
+  const unit = document.getElementById("unitSelect").value;
+  const typeSelect = document.getElementById("typeSelect");
+
+  typeSelect.innerHTML = '<option value="">Pilih Type</option>';
+
+  if (!hargaData[unit]) return;
+
+  Object.keys(hargaData[unit]).forEach(type => {
+    const option = document.createElement("option");
+    option.textContent = type;
+    option.value = type;
+    typeSelect.appendChild(option);
+  });
+}
+
+/* ===============================
+   DATA HARGA OTR
+================================ */
+
+const hargaData = {
+  "Creta": {
+    "Active MT": 309300000,
+    "Trend IVT": 363150000,
+    "Style IVT": 408850000
+  },
+  "Stargazer": {
+    "Active MT": 259700000,
+    "Prime IVT": 333400000
+  },
+  "Kona EV": {
+    "Prime": 584500000,
+    "Signature": 652650000
+  }
+};
+
+/* ===============================
+   LOAD TYPE OTOMATIS
+================================ */
+
+function loadType() {
+  const unit = document.getElementById("unitSelect").value;
+  const typeSelect = document.getElementById("typeSelect");
+
+  typeSelect.innerHTML = '<option value="">Pilih Type</option>';
+
+  if (!hargaData[unit]) return;
+
+  Object.keys(hargaData[unit]).forEach(type => {
+    const option = document.createElement("option");
+    option.textContent = type;
+    option.value = type;
+    typeSelect.appendChild(option);
+  });
+}
+
+/* ===============================
+   ISI OTR OTOMATIS
+================================ */
+
+function isiOTR() {
   const unit = document.getElementById("unitSelect").value;
   const type = document.getElementById("typeSelect").value;
 
-  if(dataMobil[unit] && dataMobil[unit][type]){
-    document.getElementById("hargaOTR").value =
-      formatRupiah(dataMobil[unit][type]);
-  }
+  if (!hargaData[unit] || !hargaData[unit][type]) return;
+
+  const harga = hargaData[unit][type];
+
+  document.getElementById("hargaOTR").value =
+    "Rp " + harga.toLocaleString("id-ID");
 }
 
+/* ===============================
+   DP 20% OTOMATIS
+================================ */
 
-// ===============================
-// DP 20% OTOMATIS
-// ===============================
-function isiDP20(){
-  const harga = parseInt(
-    document.getElementById("hargaOTR").value.replace(/\./g,'')
-  );
+function isiDP20() {
+  const hargaText = document.getElementById("hargaOTR").value;
+  if (!hargaText) return;
 
+  const harga = parseInt(hargaText.replace(/\D/g, ""));
   const dp = harga * 0.2;
 
   document.getElementById("dpManual").value =
-    formatRupiah(dp);
+    "Rp " + dp.toLocaleString("id-ID");
 }
 
+/* ===============================
+   HITUNG SIMULASI
+================================ */
 
-// ===============================
-// HITUNG SIMULASI
-// ===============================
-function hitungSimulasi(){
-
-  const harga = parseInt(
-    document.getElementById("hargaOTR").value.replace(/\./g,'')
-  );
-
-  const dp = parseInt(
-    document.getElementById("dpManual").value.replace(/\./g,'')
-  );
-
+function hitungSimulasi() {
+  const hargaText = document.getElementById("hargaOTR").value;
+  const dpText = document.getElementById("dpManual").value;
   const tenor = parseInt(document.getElementById("tenor").value);
 
-  const bunga = 0.05;
+  if (!hargaText || !dpText) {
+    alert("Lengkapi data dulu");
+    return;
+  }
 
-  const pokok = harga - dp;
-  const total = pokok + (pokok * bunga * tenor);
-  const cicilan = Math.round(total / (tenor * 12));
+  const harga = parseInt(hargaText.replace(/\D/g, ""));
+  const dp = parseInt(dpText.replace(/\D/g, ""));
+
+  const sisa = harga - dp;
+
+  const bunga = 0.05; // 5%
+  const total = sisa + (sisa * bunga * tenor);
+  const cicilan = total / (tenor * 12);
 
   document.getElementById("hasilSimulasi").innerHTML =
-    "DP: Rp " + formatRupiah(dp) +
-    "<br>Cicilan / bulan: Rp " + formatRupiah(cicilan) +
-    '<div class="note">*Hitungan ini hanya simulasi estimasi</div>';
+    "<b>Cicilan per bulan:</b><br>Rp " +
+    cicilan.toLocaleString("id-ID");
 }
 
 
