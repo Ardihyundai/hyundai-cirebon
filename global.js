@@ -394,6 +394,14 @@ function closeMenu(){
   document.getElementById("sideMenu").classList.remove("active");
 }
 
-<button class="btn btn-outline" onclick="toggleType(this)">
-Type & OTR
-</button>
+// ================= TOGGLE TYPE LIST =================
+function toggleType(button){
+  const card = button.closest(".unit-card");
+  const typeList = card.querySelector(".type-list");
+
+  if(typeList.style.display === "block"){
+    typeList.style.display = "none";
+  } else {
+    typeList.style.display = "block";
+  }
+}
