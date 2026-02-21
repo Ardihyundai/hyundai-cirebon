@@ -1,6 +1,7 @@
-// ===============================
-// DATA UNIT & TYPE (FULL)
-// ===============================
+// ================================
+// DATA UNIT & TYPE (FULL UPDATE)
+// ================================
+
 const dataMobil = {
 
   "Stargazer": {
@@ -17,11 +18,11 @@ const dataMobil = {
     "Prime IVT 6 Seat 1 Tone": 334400000,
     "Prime IVT 6 Seat 2 Tone": 335900000,
     "Style 6 Seat": 350950000,
-    "X Prime 6 Seat 1 Tone": 361300000,
-    "X Prime 6 Seat 2 Tone": 362800000,
+    "X Prime 6 Seat (One Tone Roof)": 361300000,
+    "X Prime 6 Seat (Two Tone Roof)": 362800000,
     "X Style 7 Seat": 349450000,
-    "X Prime 7 Seat 1 Tone": 360300000,
-    "X Prime 7 Seat 2 Tone": 361800000
+    "X Prime 7 Seat (One Tone Roof)": 360300000,
+    "X Prime 7 Seat (Two Tone Roof)": 361800000
   },
 
   "Stargazer Cartenz": {
@@ -31,24 +32,30 @@ const dataMobil = {
     "Style MT Captain Seat": 301500000,
     "Style IVT 7 Seat": 308200000,
     "Style IVT Captain Seat": 311700000,
-    "Smart IVT 7 Seat": 341750000,
-    "Smart IVT Captain Seat": 345250000,
+    "Smart MT 7 Seat": 341750000,
+    "Smart MT Captain Seat": 345250000,
     "Prime IVT 7 Seat": 359700000,
     "Prime IVT Captain Seat": 363200000,
-    "Trend X 7 Seat": 371750000,
-    "Trend X Captain": 375250000,
-    "Style X 7 Seat": 385200000,
-    "Style X Captain": 388700000,
-    "Prime Package 7 Seat": 402200000,
-    "Prime Package Captain": 405700000
+    "Cartenz X Trend 7 Seat": 371750000,
+    "Cartenz X Trend Captain Seat": 375250000,
+    "Cartenz X Style 7 Seat": 385200000,
+    "Cartenz X Style Captain Seat": 388700000,
+    "Cartenz X Prime Package 7 Seat": 402200000,
+    "Cartenz X Prime Package Captain Seat": 405700000
   },
 
   "Creta": {
-    "Active MT": 291300000,
-    "Trend MT": 313500000,
-    "Trend IVT": 334600000,
-    "Style IVT": 376500000,
-    "Prime IVT": 404000000
+    "New Creta 6 MT Active": 309300000,
+    "New Creta IVT Trend": 363150000,
+    "New Creta IVT Style": 408850000,
+    "New Creta IVT Prime (One Tone Sunroof)": 440000000,
+    "New Creta IVT Prime (Two Tone Sunroof)": 443000000,
+    "New Creta Alpha Edition (One Tone Sunroof)": 456500000,
+    "New Creta Alpha Edition (Two Tone Sunroof)": 459500000,
+    "New Creta N Line (One Tone Sunroof)": 474500000,
+    "New Creta N Line (Two Tone Sunroof)": 477500000,
+    "New Creta N Line Turbo (One Tone Sunroof)": 522500000,
+    "New Creta N Line Turbo (Two Tone Sunroof)": 525500000
   },
 
   "Kona EV": {
@@ -71,10 +78,10 @@ const dataMobil = {
   },
 
   "Santa Fe": {
-    "G 2.5 Prime": 737300000,
-    "G 2.5 Calligraphy": 826800000,
-    "HEV Prime": 828900000,
-    "HEV Calligraphy": 916200000
+    "G 2.5 8AT Prime": 737300000,
+    "G 2.5 8AT Calligraphy": 826800000,
+    "D 1.6 8AT HEV Prime": 828900000,
+    "D 1.6 8AT HEV Calligraphy": 916200000
   },
 
   "Palisade": {
@@ -82,6 +89,7 @@ const dataMobil = {
     "HEV Calligraphy GRA": 1306200000,
     "HEV Calligraphy AWD GRA": 1393300000
   }
+
 };
 
 
