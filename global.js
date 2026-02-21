@@ -384,33 +384,7 @@ window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`,"_blank
 // OPEN MODAL
 // =============================
 
-function openSimulasi(){
-  const modal = document.getElementById("simulasiModal");
-  if(modal){
-    modal.style.display = "block";
-  }
-}
 
-function openTestDrive(){
-  const modal = document.getElementById("testDriveModal");
-  if(modal){
-    modal.style.display = "block";
-  }
-}
-
-function closeSimulasi(){
-  const modal = document.getElementById("simulasiModal");
-  if(modal){
-    modal.style.display = "none";
-  }
-}
-
-function closeTestDrive(){
-  const modal = document.getElementById("testDriveModal");
-  if(modal){
-    modal.style.display = "none";
-  }
-}
 
 // =============================
 // CLOSE MENU
