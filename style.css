@@ -567,3 +567,112 @@ section:last-of-type {
 .hero{
     padding: 60px 20px 30px 20px !important;
 }
+/* ===============================
+   ARTIKEL PAGE STYLE
+================================ */
+
+.article-container{
+  max-width:900px;
+  margin:40px auto;
+  padding:30px;
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.article-container h1{
+  font-size:34px;
+  margin-bottom:20px;
+  color:#0a2a43;
+}
+
+.article-container h2{
+  margin-top:30px;
+  font-size:24px;
+  color:#003f6b;
+}
+
+.article-container p{
+  line-height:1.8;
+  margin-bottom:15px;
+  color:#333;
+}
+
+.article-container ul{
+  margin-left:20px;
+}
+
+.article-container li{
+  margin-bottom:8px;
+}
+/* ===============================
+   DEALER PAGE
+================================ */
+
+.dealer-section{
+  padding:60px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#0a2a43,#002d4d);
+  color:white;
+}
+
+.dealer-section h1{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.dealer-section p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+  opacity:0.9;
+}
+
+.promo-box{
+  margin-top:40px;
+  display:grid;
+  gap:20px;
+}
+
+.promo-item{
+  background:white;
+  color:#000;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.promo-item:hover{
+  transform:translateY(-5px);
+}
+/* ===============================
+   PRIVACY POLICY
+================================ */
+
+.privacy-container{
+  max-width:800px;
+  margin:50px auto;
+  padding:40px;
+  background:white;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.privacy-container h1{
+  color:#003f6b;
+  margin-bottom:15px;
+}
+
+.privacy-container h2{
+  margin-top:25px;
+  color:#0a2a43;
+}
+
+.privacy-container ul{
+  margin-left:20px;
+}
+
+.privacy-container li{
+  margin-bottom:8px;
+}
