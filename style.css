@@ -550,3 +550,17 @@ margin:30px 0;
   font-weight:700;
   color:#00e0ff;
 }
+
+/* FIX FOOTER NEMPEL BAWAH */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
