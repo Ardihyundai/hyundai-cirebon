@@ -564,3 +564,16 @@ body {
 main {
     flex: 1;
 }
+
+/* FIX RUANG KOSONG SEBELUM FOOTER */
+
+.hero {
+    padding-bottom: 20px !important;
+}
+
+#counter, 
+.counter,
+section:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
